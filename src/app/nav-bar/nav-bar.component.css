@@ -21,6 +21,9 @@ height: 30px;
     text-decoration: none;
     font-size: 17px;
   }
+
+
+
   
   /* Add an active class to highlight the current page */
   .active {
@@ -82,10 +85,14 @@ height: 30px;
       top: 0;
     }
     .topnav.responsive a {
-      float: none;
+      float: left;
+      clear: both;
       display: block;
+      justify-content: inherit;
       text-align: left;
+      
     }
+     
     .topnav.responsive  {float: none;}
     .topnav.responsive  {position: relative;}
     .topnav.responsive  {
@@ -93,4 +100,12 @@ height: 30px;
       width: 100%;
       text-align: right;
     }
+    
+     #logo{
+       float: left;
+     }
+  }
+  @media screen and (max-width: 720px) {
+    .nav1{display: none;}
+    
   }
