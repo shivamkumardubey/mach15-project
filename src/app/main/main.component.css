@@ -2,7 +2,7 @@
 .hero-image {
     background-image: url("../../assets/mainpage1.jpg");
     background-color: #cccccc;
-    height: 70vh;
+    height: 600px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
