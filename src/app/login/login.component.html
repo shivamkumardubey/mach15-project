@@ -1,0 +1,45 @@
+<app-nav-bar></app-nav-bar>
+<div class="container" style="margin-top: 50px;">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header" style="background-color: white;">
+				<h3 style="color: black;">Sign In</h3>
+			
+			</div>
+			<div class="card-body">
+				<form class="was-validated need-validation">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" placeholder="username">
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" class="form-control" placeholder="password">
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox"><span style="color: black;" >Remember Me</span>
+					</div>
+					<div class="form-group">
+						<input  value="Login" class="btn float-right login_btn">
+					</div>
+				</form>
+			</div>
+			<div class="card-footer"  style="background-color: white;">
+				<div class="d-flex justify-content-center links">
+					<b style="color: black;">Don't have an account?</b><a routerLink="/signup">Sign Up</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a href="">Forgot your password?</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<app-footer></app-footer>
