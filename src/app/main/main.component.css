@@ -126,3 +126,155 @@
           /* for contact */
           .cont1{text-align: center;
         padding: 20px;}
+
+
+
+        /* for last section */
+        /* @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800"); */
+
+
+/* body {
+  background-color: #dce1e5;
+  font-family: "Montserrat", helvetica, arial, sans-serif;
+  font-size: 14px;
+  color: #cfd6e1;
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-x: hidden;
+} 
+
+ {
+  -webkit-transition: .4s;
+  transition: .4s;
+} */
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: 0;
+  cursor: pointer;
+}
+button:focus {
+  outline: 0;
+}
+
+
+
+
+.movie-card__overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+
+
+.movie-card__icon {
+  color: #ffffff;
+  mix-blend-mode: lighten;
+  opacity: .4;
+  background: none;
+  padding: 0;
+}
+.movie-card__icon:hover {
+  opacity: 1;
+  mix-blend-mode: lighten;
+}
+.movie-card__icon:not(:first-of-type) {
+  margin-left: 5px;
+}
+.movie-card__icon i {
+  font-size: 1.2em;
+}
+.movie-card__content {
+  width: 100%;
+  max-width:800px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  position: relative;
+  float: right;
+  padding-right: 1.2em;
+  padding-bottom: 1em;
+}
+@media screen and (max-width: 1200px) {
+  .movie-card__content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .movie-card__content {
+    margin-top: 4.2em;
+    width: 100%;
+    float: inherit;
+    max-width: 100%;
+    padding: 0 1em 1em;
+  }
+}
+.movie-card__header {
+  margin-bottom: 2em;
+}
+.movie-card__title {
+  color: #4d4242;
+  margin-bottom: .25em;
+  opacity: .75;
+}
+.movie-card__info {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .8em;
+  color: #86898b;
+  line-height: 1;
+  margin: 0;
+  font-weight: 700;
+  opacity: .5;
+}
+.movie-card__desc {
+  font-weight: 300;
+  opacity: .84;
+  margin-bottom: 2em;
+}
+
+
+
+@media screen and (max-width: 600px){
+  .svg1,.svg2{
+ display: none;
+  }
+}
+.svgs1{
+   height: 500px;
+   padding: 40px;
+   width: 100%;
+   
+}
+.svgss1{
+  background-color:#ffe6ff ;
+ 
+  margin-bottom: 30px;
+}
+ 
+@media screen and (max-width: 600px){
+  .movie-card__desc{
+  display: none;
+  }
+
+  }
+  @media screen and (max-width: 600px){
+    .svgs1,.svgs2{
+      height: 200px;
+      display: contents;
+    }} 
