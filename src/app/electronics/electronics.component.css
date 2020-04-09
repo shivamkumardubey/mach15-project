@@ -1,4 +1,7 @@
 
+section{
+    margin-top: 60px;
+}
   .profile {
     position: relative;
     background: var(--backgroundColor);
