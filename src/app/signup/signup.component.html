@@ -1,6 +1,10 @@
 <app-nav-bar></app-nav-bar>
+
+
 <div class="card bg-light">
+  
     <article class="card-body mx-auto" style="max-width: 400px;box-shadow: 2px 3px 9px grey; margin-bottom: 60px;margin-top: 60px;">
+        <p *ngIf="passwordmessage" style="    color: red;text-align: center;">{{passmessage}}</p>
         <h4 class="card-title mt-3 text-center">Create Account</h4>
         <p class="text-center">Get started with your free account</p>
         <p>
@@ -10,18 +14,20 @@
         <p class="divider-text">
             <span class="bg-light">OR</span>
         </p>
-       <form class="was-validated need-validation">
+       <form class="was-validated need-validation" #signup="ngForm" (ngSubmit)="usersignup(signup.value)">
         <div class="form-group input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-user"></i> </span>
              </div>
-            <input name="" class="form-control" placeholder="Full name" type="text">
+            <input  class="form-control" placeholder="Full name" ngModel name="fullname" maxlength="50" required  type="text">
         </div> <!-- form-group// -->
         <div class="form-group input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
              </div>
-            <input name="" class="form-control" placeholder="Email address" type="email">
+            <input  class="form-control" placeholder="Email address" ngModel name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="50" required  type="email"  >
+
+            
         </div> <!-- form-group// -->
         <div class="form-group input-group">
             <div class="input-group-prepend">
@@ -31,36 +37,30 @@
                 <option selected="">+91</option>
                 
             </select>
-            <input name="" class="form-control" placeholder="Phone number" type="tel">
-        </div> <!-- form-group// -->
-        <!--
-        <div class="form-group input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text"> <i class="fa fa-building"></i> </span>
-            </div>
-            <select class="form-control">
-                <option selected=""> Select job type</option>
-                <option>Designer</option>
-                <option>Manager</option>
-                <option>Accaunting</option>
-            </select>
-         
-        </div>  form-group end.// -->
+            <input  class="form-control" placeholder="Phone number"  ngModel name="phone" maxlength="50" required type="tel">
+        </div> 
         <div class="form-group input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
             </div>
-            <input class="form-control" placeholder="Create password" type="password">
+            <input class="form-control" placeholder="Create password" ngModel name="password" minlength="5" maxlength="50" required  type="password">
         </div> <!-- form-group// -->
         <div class="form-group input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
             </div>
-            <input class="form-control" placeholder="Repeat password" type="password">
+            <input class="form-control" placeholder="Repeat password" ngModel name="repeatpassword" minlength="5" maxlength="50" required type="password">
         </div> <!-- form-group// -->                                      
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block" style="background-color: #389c64;" routerLink="/signup"> Create Account  </button>
-        </div> <!-- form-group// -->      
+        <!-- <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block" disabled style="background-color: #389c64;" > Create Account  </button>
+        </div>  -->
+        <div *ngIf="!(signup.valid) else showSubmitButton">
+            <button class="btn btn-lg btn-block btn-block" type="submit" disabled>Sign up</button>
+          </div>
+          <ng-template #showSubmitButton>
+            <button class="btn btn-lg btn-primary btn-block" style="background-color: #389c64;" type="submit">Sign up</button>
+          </ng-template>
+        <!-- form-group// -->      
         <p class="text-center">Have an account? <a routerLink="/login">Log In</a> </p>                                                                 
       </form>
     </article>

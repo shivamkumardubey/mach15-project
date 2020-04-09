@@ -10,7 +10,8 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ComputerscienceComponent } from './computerscience/computerscience.component';
 import { ElectronicsComponent } from './electronics/electronics.component';
-
+import{FormsModule} from "@angular/forms"
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,7 @@ import { ElectronicsComponent } from './electronics/electronics.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

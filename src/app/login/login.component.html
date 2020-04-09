@@ -7,26 +7,29 @@
 			
 			</div>
 			<div class="card-body">
-				<form class="was-validated need-validation">
+				<form class="was-validated need-validation"  #login="ngForm" (ngSubmit)="userlogin(login.value)" >
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fa fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="username">
+						<input  class="form-control" placeholder="Email address" ngModel name="email" maxlength="50" required   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email"  >
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fa fa-lock"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="password">
+						<input class="form-control" placeholder="Create password" ngModel name="password"  maxlength="50" required  type="password">
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox"><span style="color: black;" >Remember Me</span>
 					</div>
-					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-block" style="background-color: #389c64;" routerLink="/login"> login </button>
-					</div>
+					<div *ngIf="!(login.valid) else showSubmitButton">
+						<button class="btn btn-lg btn-block btn-block" type="submit" disabled>Log in</button>
+					  </div>
+					  <ng-template #showSubmitButton>
+						<button class="btn btn-lg btn-primary btn-block" style="background-color: #389c64;" type="submit">Log in</button>
+					  </ng-template>
 				</form>
 			</div>
 			<div class="card-footer"  style="background-color: white;">
