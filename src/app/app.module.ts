@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ComputerscienceComponent } from './computerscience/computerscience.component';
+import { ElectronicsComponent } from './electronics/electronics.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ComputerscienceComponent } from './computerscience/computerscience.comp
     FooterComponent,
     SignupComponent,
     LoginComponent,
-    ComputerscienceComponent
+    ComputerscienceComponent,
+    ElectronicsComponent
   ],
   imports: [
     BrowserModule,
