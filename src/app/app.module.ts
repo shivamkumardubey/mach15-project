@@ -11,6 +11,9 @@ import { LoginComponent } from './login/login.component';
 import { ComputerscienceComponent } from './computerscience/computerscience.component';
 import { ElectronicsComponent } from './electronics/electronics.component';
 import{FormsModule} from "@angular/forms"
+import { HttpClientModule } from '@angular/common/http';
+import{ AuthGaurdService} from './services/auth-gaurd.service'
+import{ BackendService} from './services/backend.service'
 import { from } from 'rxjs';
 @NgModule({
   declarations: [
@@ -26,9 +29,9 @@ import { from } from 'rxjs';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule
+    AppRoutingModule,FormsModule,HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthGaurdService,BackendService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

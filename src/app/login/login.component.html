@@ -4,7 +4,7 @@
 		<div class="card">
 			<div class="card-header" style="background-color: white;">
 				<h3 style="color: black;">Sign In</h3>
-			
+				<p *ngIf="error" style="    color: red;text-align: center;">{{errorMessage}}</p>
 			</div>
 			<div class="card-body">
 				<form class="was-validated need-validation"  #login="ngForm" (ngSubmit)="userlogin(login.value)" >
@@ -19,7 +19,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fa fa-lock"></i></span>
 						</div>
-						<input class="form-control" placeholder="Create password" ngModel name="password"  maxlength="50" required  type="password">
+						<input class="form-control" placeholder="enter password" ngModel name="password"  maxlength="50" required  type="password">
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox"><span style="color: black;" >Remember Me</span>
@@ -28,7 +28,7 @@
 						<button class="btn btn-lg btn-block btn-block" type="submit" disabled>Log in</button>
 					  </div>
 					  <ng-template #showSubmitButton>
-						<button class="btn btn-lg btn-primary btn-block" style="background-color: #389c64;" type="submit">Log in</button>
+						<button class="btn btn-lg btn-primary btn-block" style="background-color: #389c64;" type="submit"> <i class="fa fa-spinner fa-spin" *ngIf="dataLoading"></i> Log in</button>
 					  </ng-template>
 				</form>
 			</div>

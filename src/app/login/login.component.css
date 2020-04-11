@@ -91,3 +91,7 @@ color: white;
 .links a{
 margin-left: 4px;
 }
+.fa {
+    margin-left: -12px;
+    margin-right: 8px;
+  }

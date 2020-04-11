@@ -5,14 +5,15 @@ import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
 import { ComputerscienceComponent } from './computerscience/computerscience.component';
 import { ElectronicsComponent } from './electronics/electronics.component';
-
+import{ AuthGaurdService} from './services/auth-gaurd.service'
 
 const routes: Routes = [ 
   {path:"",component:MainComponent},
   {path:"signup",component:SignupComponent},
   {path:"login",component:LoginComponent},
   {path:"computerscience",component:ComputerscienceComponent},
-  {path:"electronic",component:ElectronicsComponent}
+  {path:"electronic",component:ElectronicsComponent},
+  {path:"check",component:ElectronicsComponent,canActivate:[AuthGaurdService]}
 
 ];
 
