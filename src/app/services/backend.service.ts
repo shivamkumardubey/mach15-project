@@ -6,6 +6,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class BackendService {
 
   constructor(private _http: HttpClient) { }
+
+public username=""
+public loginstatus=false;
   
   signup(data){
     let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";

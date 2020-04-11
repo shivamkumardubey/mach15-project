@@ -6,7 +6,6 @@
             <i class="fa fa-facebook-f" style="font-size:25px;color:white;padding-right: 50px;"></i>  
             <i class="fa fa-twitter" style="font-size:25px;color:white;padding-right: 50px;"></i>   
             <i class="fa fa-instagram" style="font-size:25px;color:white;padding-right: 50px;"></i> 
-           
         </div>
     </div>
     
@@ -20,15 +19,29 @@
 <div [class]="nav" id="myTopnav ">
 
     <a class="navbar-brand" style="float: left ;"><img src="assets/logo.png" width="80" alt="" srcset=""></a>
-    <a routerLink="/signup" id="login">Login/Signup</a>
+    <a routerLink="/signup" id="login" *ngIf="!loginstatus">Login/Signup</a>
+    <div class="dropdown" *ngIf="loginstatus" style="padding-right: 90px;">
+        <a class=" dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle-o" style="font-size:25px"></i>{{username}}
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu"  style="    padding-left: 12px; padding-right: 40px;">
+         <li><a href="#">Dashboard</a></li> 
+       
+         <li> <a href="#">View Profile</a></li>
+         <li><a href="#">change password</a></li> 
+         <li><a href=" " (click)="logout()">logout</a></li> 
+         <li></li>  
+        </ul>
+    </div>
+  
     <a href="#home"  >JOIN US</a>
     <a href="#news">INNOVATION</a>
     <a href="#contact">BECOME A PARTNER</a>
     
     <a href="#about">POST PROJECT</a>
     <a routerLink="" class="active">HOME</a>
-   
-     
+    
+    
+    
     <a href="javascript:void(0);" class="icon" (click)="myFunction()">&#9776;</a>
   </div>
 
