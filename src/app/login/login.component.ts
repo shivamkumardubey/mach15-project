@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit,OnDestroy {
         this.errorMessage = "";
         this.dataLoading = false;
         window.localStorage.setItem('token', res["token"]);
+        window.localStorage.setItem('name', res["username"]);
         this._backendService.loginstatus=true;
         this._backendService.username=res["username"]
         this._route.navigate(['/']);

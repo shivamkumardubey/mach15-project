@@ -14,6 +14,7 @@ public loginstatus;
   ngOnInit(): void {
      this.username=this._backendService.username;
     this.loginstatus=this._backendService.loginstatus;
+
   }
   public nav="topnav";
   public myFunction() {
@@ -26,6 +27,7 @@ public loginstatus;
   }
    public logout(){
       localStorage.removeItem("token");
+      localStorage.removeItem("name");
       this._backendService.loginstatus=false;
       this._route.navigate(["/"]);
 
