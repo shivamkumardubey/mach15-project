@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:400,700,900");
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-image: linear-gradient(-45deg, #EEF0F3 0%, #F6F5F3 100%);
+  font-family: "Muli", helvetica, arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.webinar-card {
+  margin: 10vh auto;
+  width: 50%;
+  border-radius: 8px;
+  box-shadow: 0 15px 35px rgba(50, 50, 90, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+  background: #ffffff;
+  text-align: left;
+}
+
+.webinar-card__content {
+  padding: .3em 2em;
+}
+
+.header-img {
+  border-radius: 4px 4px 0 0;
+  margin-bottom: 2vh;
+  background-image: url("https://topgearmotorsport.files.wordpress.com/2017/04/2013-indy-500.jpg?w=1360");
+  display: block;
+  height: 150px;
+  background-size: cover;
+  background-position: 30% 90%;
+}
+
+.header-icon {
+  color: #ffffff;
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-size: 4em;
+  line-height: 150px;
+  width: 100%;
+  height: 150px;
+  opacity: .5;
+  background-color: rgba(30, 31, 64, 0.5);
+}
+
+.header-icon:hover {
+  text-shadow: 0px 3px 11px rgba(0, 0, 0, 0.4);
+  opacity: 1;
+}
+
+.h1 {
+  font-size: 2em;
+  color: #28294a;
+  font-weight: 900;
+  font-family: "Muli", helvetica, arial, sans-serif;
+  line-height: 1;
+  margin-top: 5px;
+}
+
+.label {
+  font-size: .6rem;
+
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Muli", helvetica, arial, sans-serif;
+  font-weight: 700;
+  background-color: #845ecc;
+  padding: .5em 1em;
+  border-radius: 13px;
+}
+
+.p {
+  color: #9e9e9e;
+  font-family: "Muli", helvetica, arial, sans-serif;
+  font-weight: 400;
+  font-size: .9rem;
+  line-height: 1.4;
+  margin-top: 20px;
+}
+
+.a{
+  text-decoration: none;
+  color: red;
+  font-family: "Muli", helvetica, arial, sans-serif;
+  font-weight: 400;
+  font-size: .9rem;
+  line-height: 1.4;
+}
+
+.a:hover{
+  text-decoration: underline;
+}  

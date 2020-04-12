@@ -95,6 +95,7 @@
         .topnav a.icon {
           float: right;
           display: block;
+         
         }
       }
       
@@ -127,6 +128,7 @@
           text-align: right;
           height: auto;
           overflow: hidden;
+          
         }
         
          #logo{

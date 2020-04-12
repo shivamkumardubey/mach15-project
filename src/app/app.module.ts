@@ -13,8 +13,12 @@ import { ElectronicsComponent } from './electronics/electronics.component';
 import{FormsModule} from "@angular/forms"
 import { HttpClientModule } from '@angular/common/http';
 import{ AuthGaurdService} from './services/auth-gaurd.service'
-import{ BackendService} from './services/backend.service'
+import{ BackendService} from './services/backend.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatTabsModule} from '@angular/material/tabs';
 import { from } from 'rxjs';
+import { ViewprofileComponent } from './viewprofile/viewprofile.component';
+import { ProjectlistComponent } from './projectlist/projectlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,11 +29,13 @@ import { from } from 'rxjs';
     SignupComponent,
     LoginComponent,
     ComputerscienceComponent,
-    ElectronicsComponent
+    ElectronicsComponent,
+    ViewprofileComponent,
+    ProjectlistComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,HttpClientModule,
+    AppRoutingModule,FormsModule,HttpClientModule,MatTabsModule, BrowserAnimationsModule
   ],
   providers: [AuthGaurdService,BackendService],
   bootstrap: [AppComponent]

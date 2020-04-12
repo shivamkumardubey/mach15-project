@@ -16,22 +16,22 @@
 
 
 
-<div [class]="nav" id="myTopnav ">
+<div [class]="nav" id="myTopnav " style="    border-bottom: 1px solid lightgray;">
 
     <a class="navbar-brand" style="float: left ;"><img src="assets/logo.png" width="80" alt="" srcset=""></a>
     <a routerLink="/signup" id="login" *ngIf="!loginstatus">Login/Signup</a>
-    <div class="dropdown" *ngIf="loginstatus" style="padding-right: 90px;">
+    <a href="" class="dropdown" *ngIf="loginstatus" style="padding: inherit; border-bottom: none;" >
         <a class=" dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle-o" style="font-size:25px"></i>{{username}}
         <span class="caret"></span></a>
         <ul class="dropdown-menu"  style="    padding-left: 12px; padding-right: 40px;">
          <li><a href="#">Dashboard</a></li> 
        
-         <li> <a href="#">View Profile</a></li>
+         <li> <a routerLink="/viewprofile">View Profile</a></li>
          <li><a href="#">change password</a></li> 
          <li><a href=" " (click)="logout()">logout</a></li> 
          <li></li>  
         </ul>
-    </div>
+    </a>
   
     <a href="#home"  >JOIN US</a>
     <a href="#news">INNOVATION</a>

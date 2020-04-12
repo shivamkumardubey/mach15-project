@@ -1,0 +1,33 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+    font-size: large;
+    padding: 15px;
+
+  }
+  
+  tr:nth-child(even) {
+    background-color: #fff6f6;;
+  }
+  .div1{
+    justify-content:
+     center;padding-left: 15vw;
+      padding-top: 10vh;
+      padding-bottom: 10vh;
+  }
+  .div2{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .div3{
+    padding-top: 5rem;
+    padding-bottom: 17rem;
+  }
