@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit,OnDestroy {
 
 
   userlogin(value){
+    console.log(value)
     this.dataLoading = true;
     this.querySubscription=this._backendService.login(value).subscribe((res)=>{
       if (res["status"] ) {
@@ -30,8 +31,11 @@ export class LoginComponent implements OnInit,OnDestroy {
         window.localStorage.setItem('token', res["token"]);
         window.localStorage.setItem('name', res["username"]);
         this._backendService.loginstatus=true;
-        this._backendService.username=res["username"]
+        this._backendService.username=res["username"];
+        this._backendService.phone=res["phone"];
+        this._backendService.email=res["email"];
         this._route.navigate(['/']);
+        // console.log(res["result"][0].id)
     } else {
         this.error = true;
         this.errorMessage = res["errorMessage"];
@@ -40,7 +44,7 @@ export class LoginComponent implements OnInit,OnDestroy {
     },
     (error)=>{
       this.error = true;
-      this.errorMessage = error.message;
+      this.errorMessage = "something is wrong";
       this.dataLoading = false;
     },
     ()=>{this.dataLoading = false;})

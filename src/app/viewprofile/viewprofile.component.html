@@ -2,117 +2,132 @@
 <app-nav-bar></app-nav-bar>
 <mat-tab-group style="height: auto;">
     <mat-tab style="background-color: aqua;" label = "profile"> 
+      <div class="container">
+        <div class="row">
+          <h1 style="    padding-top: 65px;font-size: 3em;color: cadetblue;"> Welcome {{username}}</h1>
+        </div>
+      </div>
         <div class="div1">
         <table>
             <tr>
                 <th>Name</th>
-                <td>dsnnsdkmlksdsdkm</td>
+                <td>{{username}}</td>
                 
               </tr>
         <tr>
           <th>email</th>
-          <td>dsnnsdkmlksdsdkm</td>
+          <td>{{email}}</td>
           
         </tr>
         <tr>
           <th>phone</th>
-          <td>Maria Anders</td>
+          <td>{{phone}}</td>
          
         </tr>
         <tr>
             <th>college</th>
-          <td>Francisco Chang</td>
+          <td>{{college}}</td>
           
         </tr>
         <tr>
             <th>department</th>
-          <td>Roland Mendel</td>
+          <td> {{department}}</td>
         
         </tr>
         <tr>
             <th>degree</th>
-          <td>Helen Bennett</td>
+          <td>{{degree}}</td>
          
         </tr>
         <tr>
             <th>adress</th>
-          <td>Yoshi Tannamuri</td>
+          <td>{{address}}</td>
          
         </tr>
         <tr>
             <th>joining year</th>
-          <td>Giovanni Rovelli</td>
+          <td>{{joiningyear}}</td>
          
         </tr>
       </table>
       </div>
+      
     </mat-tab>
 
-    <mat-tab label = "edit"> 
+    <mat-tab label = "updateprofile"> 
         <div class="container" >
-      <div class="row" class="div2">
-       <form>
-             <div class="row">
-          <div class="col-5"><h4> name</h4></div>
-           <div class="col-7"><input type="text"></div>
-           </div>
-           <div class="row">
-            <div class="col-5"><h4> name</h4></div>
-             <div class="col-7"><input type="text"></div>
-             </div>
-           <div class="row">
-             <div class="col-5"><h4> name</h4></div>
-             <div class="col-7"><input type="text"></div>
-            </div>
           <div class="row">
-                <div class="col-5"><h4> name</h4></div>
-                <div class="col-7"><input type="text"></div>
-            </div>
-            <div class="row">
-                <div class="col-5"><h4> name</h4></div>
-                <div class="col-7"><input type="text"></div>
-            </div>
-            <div class="row">
-                <div class="col-5"><h4> name</h4></div>
-                <div class="col-7"><input type="text"></div>
-            </div>   
-            <div class="row">
-                <div class="col-5"><h4> name</h4></div>
-                <div class="col-7"><input type="text"></div>
-            </div>
-            <div class="row">
-                <div class="col-5"><h4> name</h4></div>
-                <div class="col-7"><input type="text"></div>
-            </div> 
-         <button  class="btn btn-primary" style="margin-right: 25px;"type="submit">save</button>
-         <button  class="btn btn-primary" type="reset">reset</button>
+            <h1 style="    padding-top: 65px;font-size: 3em;color: cadetblue;">Update your profile</h1>
+          </div>
+      <div class="row" class="div2">
+       <form #updateprofile="ngForm" (ngSubmit)="updateuser(updateprofile.value)" >
+      <div class="row row2">
+          <div class="col-3"><label> name :</label></div>
+           <div class="col-9"><input type="text" class="input2" ngModel [ngModel]="username" name="fullname" maxlength="50" required  ></div>
+      </div>
+      <div class="row row2">
+            <div class="col-3"><label> phone</label></div>
+             <div class="col-9"><input type="tel" class="input2" ngModel [ngModel]="phone" name="phone" maxlength="10" required></div>
+       </div>
+       <div class="row row2">
+              <div class="col-3"><label> college:</label></div>
+               <div class="col-9"><input type="text" class="input2" ngModel [ngModel]="college" name="college" maxlength="50" required></div>
+         </div>
+       <div class="row row2">
+                <div class="col-3"><label> department:</label></div>
+                 <div class="col-9"><input type="text" class="input2" ngModel [ngModel]="department" name="department" maxlength="50" required></div>
+        </div>
+       <div class="row row2">
+                  <div class="col-3"><label> degree:</label></div>
+                   <div class="col-9"><input type="text" class="input2"ngModel [ngModel]="degree" name="degree" maxlength="50" required></div>
+         </div>
+       <div class="row row2">
+                    <div class="col-3"><label> address :</label></div>
+                     <div class="col-9"><input type="text" class="input2" ngModel [ngModel]="address" name="address" maxlength="50" required></div>
+          </div>
+      <div class="row row2">
+                      <div class="col-3"><label> joining year:</label></div>
+                       <div class="col-9"><input type="text" class="input2" ngModel [ngModel]="joiningyear" name="joiningyear" maxlength="50" required></div>
+      </div>  
+       
+       <div class="row row2">
+        <div class="col-2"></div>
+         <div class="col-10"> <button  class="btn btn-primary" style="margin-right: 25px;"type="submit">update </button>
+          <button  class="btn btn-primary" type="reset">reset</button>
+        </div>
+            </div>                 
 
        </form>
-        
-
-
-
-
+  
       </div>
-
-
         </div>
     
     </mat-tab>
 
     <mat-tab label = "changepassword"> 
       <div class="container">
+        <div class="row">
+          <h1 style="    padding-top: 65px;font-size: 3em;color: cadetblue;">Change your password</h1>
+       
+        </div>
+        <p *ngIf="error" style="    color: red;text-align: center;font-size: 20px;">{{errorMessage}}</p>
+        <p *ngIf="update" style="    color: green;text-align: center;font-size: 20px;">{{updateMessage}}</p>
         <div class="row" class="div3">
-          <form>
-            <div class="row">
-              <div class="col-5"><h4> password</h4></div>
-              <div class="col-7"><input type="password"></div>
+          <form #changepassword="ngForm" (ngSubmit)="changeuserpassword(changepassword.value)" >
+            <div class="row row2">
+              <div class="col-3"><label> password :</label></div>
+               <div class="col-9"><input type="password" class="input2"ngModel name="password" required ></div>
           </div>
-          <div class="row">
-              <div class="col-5"><h4> reapet password</h4></div>
-              <div class="col-7"><input type="password"></div>
-          </div> 
-            <button  class="btn btn-primary" type="submit">submit</button>
+          <div class="row row2">
+                <div class="col-3"><label> repeat password :</label></div>
+                 <div class="col-9"><input type="password" class="input2"ngModel name="repeatpassword" required ></div>
+           </div>
+           <div class="row row2">
+            <div class="col-2"></div>
+             <div class="col-10"> <button  class="btn btn-primary" style="margin-right: 25px;"type="submit">change password</button>
+            
+            </div>
+                </div> 
            </form>
         </div>
         
