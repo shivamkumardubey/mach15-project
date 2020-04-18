@@ -19,6 +19,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { from } from 'rxjs';
 import { ViewprofileComponent } from './viewprofile/viewprofile.component';
 import { ProjectlistComponent } from './projectlist/projectlist.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,9 @@ import { ProjectlistComponent } from './projectlist/projectlist.component';
     ComputerscienceComponent,
     ElectronicsComponent,
     ViewprofileComponent,
-    ProjectlistComponent
+    ProjectlistComponent,
+    ChangepasswordComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -8,15 +8,19 @@ import { ElectronicsComponent } from './electronics/electronics.component';
 import{ AuthGaurdService} from './services/auth-gaurd.service'
 import{ViewprofileComponent} from'./viewprofile/viewprofile.component'
 import{ProjectlistComponent} from'./projectlist/projectlist.component'
+import{ChangepasswordComponent}from'./changepassword/changepassword.component'
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { from } from 'rxjs';
+
 const routes: Routes = [ 
   {path:"",component:MainComponent},
   {path:"signup",component:SignupComponent},
   {path:"login",component:LoginComponent},
   {path:"computerscience",component:ComputerscienceComponent},
-  
   {path:"viewprofile",component:ViewprofileComponent,canActivate:[AuthGaurdService]},
-  {path:"projectlist",component:ProjectlistComponent,canActivate:[AuthGaurdService]}
+  {path:"projectlist",component:ProjectlistComponent,canActivate:[AuthGaurdService]},
+  {path:"changepassword",component:ChangepasswordComponent,canActivate:[AuthGaurdService]},
+  {path:"dashboard",component:DashboardComponent,canActivate:[AuthGaurdService]}
 
 ];
 
@@ -25,4 +29,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingComponent=[SignupComponent,MainComponent,LoginComponent,ComputerscienceComponent,ElectronicsComponent,ProjectlistComponent]
+export const RoutingComponent=[SignupComponent,MainComponent,LoginComponent,ComputerscienceComponent,ElectronicsComponent,ProjectlistComponent,ChangepasswordComponent,DashboardComponent]

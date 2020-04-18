@@ -11,6 +11,11 @@ export class BackendService {
  loginstatus=false;
  email="";
  phone="";
+ college:string="";
+  department:string=""
+  degree:string="";
+  address:string="";
+  joiningyear:string="";
   
   signup(data){
     
@@ -26,6 +31,17 @@ export class BackendService {
     let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
     let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
     return this._http.post("http://localhost:5000/changepassword", data, httpOptions);
+  }
+  updateuserprofile(data){
+    let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
+    let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
+    return this._http.post("http://localhost:5000/updateprofile", data, httpOptions);
+
+  }
+  viewprofile(){
+    let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
+    let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
+    return this._http.get("http://localhost:5000/viewprofile", httpOptions);
   }
 
 }

@@ -40,7 +40,7 @@
          
         </tr>
         <tr>
-            <th>adress</th>
+            <th>address</th>
           <td>{{address}}</td>
          
         </tr>
@@ -57,6 +57,8 @@
     <mat-tab label = "updateprofile"> 
         <div class="container" >
           <div class="row">
+            <p *ngIf="error1" style="    color: red;text-align: center;font-size: 20px;">{{errorMessage}}</p>
+            <p *ngIf="update1" style="    color: green;text-align: center;font-size: 20px;">{{updateMessage1}}</p>
             <h1 style="    padding-top: 65px;font-size: 3em;color: cadetblue;">Update your profile</h1>
           </div>
       <div class="row" class="div2">
@@ -116,11 +118,11 @@
           <form #changepassword="ngForm" (ngSubmit)="changeuserpassword(changepassword.value)" >
             <div class="row row2">
               <div class="col-3"><label> password :</label></div>
-               <div class="col-9"><input type="password" class="input2"ngModel name="password" required ></div>
+               <div class="col-9"><input type="password" class="input2"ngModel name="password" minlength="5"ng-required ="changepassword" ></div>
           </div>
           <div class="row row2">
                 <div class="col-3"><label> repeat password :</label></div>
-                 <div class="col-9"><input type="password" class="input2"ngModel name="repeatpassword" required ></div>
+                 <div class="col-9"><input type="password" class="input2"ngModel name="repeatpassword" minlength="5" ng-required ="changepassword" ></div>
            </div>
            <div class="row row2">
             <div class="col-2"></div>

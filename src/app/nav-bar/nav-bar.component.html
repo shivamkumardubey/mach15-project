@@ -24,10 +24,10 @@
         <a class=" dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle-o" style="font-size:25px"></i>{{username}}
         <span class="caret"></span></a>
         <ul class="dropdown-menu"  style="    padding-left: 12px; padding-right: 40px;">
-         <li><a href="#">Dashboard</a></li> 
+         <li><a routerLink="/dashboard">Dashboard</a></li> 
        
          <li> <a routerLink="/viewprofile">View Profile</a></li>
-         <li><a href="#">change password</a></li> 
+         <li><a routerLink="/changepassword">change password</a></li> 
          <li><a href=" " (click)="logout()">logout</a></li> 
          <li></li>  
         </ul>
