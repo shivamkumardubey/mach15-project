@@ -22,7 +22,7 @@ const routes: Routes = [
   {path:"projectlist",component:ProjectlistComponent,canActivate:[AuthGaurdService]},
   {path:"changepassword",component:ChangepasswordComponent,canActivate:[AuthGaurdService]},
   {path:"dashboard",component:DashboardComponent,canActivate:[AuthGaurdService]},
-  {path:"project",component:ProjectComponent,canActivate:[AuthGaurdService]},
+  {path:"project",component:ProjectComponent},
 
 ];
 
