@@ -1,0 +1,86 @@
+.backimg{
+    background: rgb(224,231,231);
+    background: linear-gradient(90deg, rgba(224,231,231,1) 0%, rgba(244,185,188,1) 100%);
+  
+  }
+ 
+  .title{
+      margin-bottom: 30px;
+      padding-top: 30px;
+  }
+  .head{
+      margin-bottom:10px;
+  }
+  
+  
+  button {
+      font-family: inherit;
+      border: 0;
+      cursor: pointer;
+    }
+    button:focus {
+      outline: 0;
+    }
+    .btn {
+      padding: .5rem 2rem;
+      background-color: rgba(255, 255, 255, 0.4);
+      color:  black;
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      border: 3px solid #f19292;
+    }
+    
+    .btn::before {
+      font-family: 'Material Icons';
+      content: '\e037';
+      vertical-align: middle;
+      font-size: 1.5em;
+      padding-right: .5em;
+    }
+    
+    .btn-outline:hover {
+      border-color: #2a9fff;
+      color: #2a9fff;
+      box-shadow: 0px 1px 8px 0px rgba(245, 199, 0, 0.2);
+    }  
+  
+    
+  h1, h2, h3 {
+      font-family: "Montserrat", helvetica, arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1;
+      font-weight: 400;
+    }
+    
+    .align{
+      margin-top: 20px;
+      align-content: center;
+      align-items: center;
+      margin-bottom: 80px;
+    
+    }
+  
+    .span{
+      background-color: white;
+      border-radius: 10px;
+      width: 60%;
+      height: 100px;
+      position: absolute;
+      top: +450px;
+      left: 0;
+      box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.25);
+      padding: 10px 15px;
+      
+    }
+    
+  
+    @media screen and (max-width: 600px) {
+      .span{
+  display: none;
+      }
+    }
+  
+   

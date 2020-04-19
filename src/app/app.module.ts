@@ -21,6 +21,7 @@ import { ViewprofileComponent } from './viewprofile/viewprofile.component';
 import { ProjectlistComponent } from './projectlist/projectlist.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProjectComponent } from './project/project.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ViewprofileComponent,
     ProjectlistComponent,
     ChangepasswordComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
