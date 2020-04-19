@@ -84,7 +84,7 @@ export class ViewprofileComponent implements OnInit ,OnDestroy{
     this.errorMessage = "something is wrong";
   },
   ()=>{
-    setTimeout(()=>{ location.reload();},1000);
+    setTimeout(()=>{ location.reload(true);},1000);
    
   });
   }
