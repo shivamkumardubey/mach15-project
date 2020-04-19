@@ -4,83 +4,125 @@
   
   }
  
-  .title{
-      margin-bottom: 30px;
-      padding-top: 30px;
+ 
+  .hero-image {
+ 
+    background-color: #505763;
+    background: linear-gradient(#29303B,#29303B,#29303B);
+    color: #fff;
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+      background-attachment: fixed;
   }
-  .head{
-      margin-bottom:10px;
-  }
   
-  
-  button {
-      font-family: inherit;
-      border: 0;
-      cursor: pointer;
-    }
-    button:focus {
-      outline: 0;
-    }
-    .btn {
-      padding: .5rem 2rem;
-      background-color: rgba(255, 255, 255, 0.4);
-      color:  black;
-    }
+  @media screen and (max-width: 720px) {
+    .hero-image {
+        background-color: #505763;
+        background: linear-gradient(#29303B,#29303B,#29303B);
+        color: #fff;
     
-    .btn-outline {
-      background-color: transparent;
-      border: 3px solid #f19292;
-    }
-    
-    .btn::before {
-      font-family: 'Material Icons';
-      content: '\e037';
-      vertical-align: middle;
-      font-size: 1.5em;
-      padding-right: .5em;
-    }
-    
-    .btn-outline:hover {
-      border-color: #2a9fff;
-      color: #2a9fff;
-      box-shadow: 0px 1px 8px 0px rgba(245, 199, 0, 0.2);
-    }  
-  
-    
-  h1, h2, h3 {
-      font-family: "Montserrat", helvetica, arial, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      line-height: 1;
-      font-weight: 400;
-    }
-    
-    .align{
-      margin-top: 20px;
-      align-content: center;
-      align-items: center;
-      margin-bottom: 80px;
-    
-    }
-  
-    .span{
-      background-color: white;
-      border-radius: 10px;
-      width: 60%;
-      height: 100px;
-      position: absolute;
-      top: +450px;
-      left: 0;
-      box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.25);
-      padding: 10px 15px;
-      
-    }
-    
-  
-    @media screen and (max-width: 600px) {
-      .span{
-  display: none;
+        height: 480px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+          background-attachment: fixed;
       }
-    }
-  
    
+  }
+  .md4{
+    position: relative;
+    bottom: 142px;
+}
+.d-block{
+    padding: 20px;
+background-color: white;
+width: 85%;
+box-shadow: 0px 10px 27px -9px rgba(0, 0, 0, 1.11);
+}
+.img{
+      
+    height: 100%;
+    width: 100%;
+  
+}
+.heading{
+    font-weight: 400;
+    font-size: 26px;
+    color: #000000;
+    text-align: center;
+    padding-top: 19px;
+
+}
+.content {
+    display: block;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #fff;
+    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: gray;
+  
+}
+.content2 {
+    display: block;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #fff;
+    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 400;
+     color: #131010;
+     padding: 5vw;
+  
+}
+ .clp-lead__title {
+    font-size: 46px;
+    line-height: 57px;
+    font-weight: 400;
+    padding-top: 108px;
+
+}
+button {
+    font-family: inherit;
+    border: 0;
+    cursor: pointer;
+  }
+  button:focus {
+    outline: 0;
+  }
+  .btn {
+    padding: .5rem 2rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    color:  black;
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 3px solid #f19292;
+  }
+  
+  .btn::before {
+    font-family: 'Material Icons';
+    content: '\e037';
+    vertical-align: middle;
+    font-size: 1.5em;
+    padding-right: .5em;
+  }
+  
+  .btn-outline:hover {
+    border-color: #2a9fff;
+    color: #2a9fff;
+    box-shadow: 0px 1px 8px 0px rgba(245, 199, 0, 0.2);
+  }  
+
+  
+
+  
+  .align{
+    margin-top: 20px;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+  
+  }
