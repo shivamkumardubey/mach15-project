@@ -19,7 +19,7 @@ const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path:"computerscience",component:ComputerscienceComponent},
   {path:"viewprofile",component:ViewprofileComponent,canActivate:[AuthGaurdService]},
-  {path:"projectlist",component:ProjectlistComponent,canActivate:[AuthGaurdService]},
+  {path:"projectlist",component:ProjectlistComponent},
   {path:"changepassword",component:ChangepasswordComponent,canActivate:[AuthGaurdService]},
   {path:"dashboard",component:DashboardComponent,canActivate:[AuthGaurdService]},
   {path:"project",component:ProjectComponent},

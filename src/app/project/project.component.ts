@@ -12,4 +12,8 @@ export class ProjectComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  userproject(data){
+    console.log(data)
+  }
+
 }

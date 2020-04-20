@@ -43,16 +43,101 @@
     <div class="row ">
         <div class="col-sm-2"></div>
         <div class="col-sm-2">
-            <button type="button" class="btn btn-danger " style="height: 50px; font-weight: bold;margin-bottom: 10px;">join now <i class="fa fa-handshake-o" style="color: white;padding-left: 5px;padding-right: 5px;"></i></button>
+            <button type="button" class="btn btn-danger " data-toggle="modal" data-target="#exampleModalCenter" style="height: 50px; font-weight: bold;margin-bottom: 10px;">join now <i class="fa fa-handshake-o" style="color: white;padding-left: 5px;padding-right: 5px;"></i></button>
         </div>
         <div class="col-sm-2">
-            <button type="button" class="btn btn-danger " style="height: 50px; font-weight: bold;">download report<i class="fa fa-download" style="color: white;"></i></button>
+            <button type="button" class="btn btn-danger " data-toggle="modal" data-target="#exampleModalCenter" style="height: 50px; font-weight: bold;">download report<i class="fa fa-download" style="color: white;"></i></button>
         </div>
         <div class="col-sm-6"></div>
     </div> 
 </div>
 
       </div>
+
+
+
+        
+          <!-- Modal content-->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content" >
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle" style="font-size: 30px;">Mach15project</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" >
+                  <!-- form -->
+                  <form class="was-validated need-validation" #projectuser="ngForm"  (ngSubmit)="userproject(projectuser.value)" >
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                         </div>
+                        <input  class="form-control" placeholder="Full name" ngModel name="fullname" maxlength="50" required  type="text">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                         </div>
+                        <input  class="form-control" placeholder="Email address" ngModel name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="50" required  type="email"  >
+            
+                        
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                        </div>
+                        <select class="custom-select" style="max-width: 120px;">
+                            <option selected="">+91</option>
+                            
+                        </select>
+                        <input  class="form-control" placeholder="Phone number"  ngModel name="phone" maxlength="10" required type="tel">
+                    </div> 
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-address-book"></i> </span>
+                            
+                        </div>
+                        <input class="form-control" placeholder="address" ngModel name="address" minlength="5" maxlength="50" required  type="text">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        
+                    
+                        <p style="font-size: 15px; padding-right: 10px;">Please select your role </p>
+                        <br>
+                        <input type="radio"   ngModel name="role"  value="student" checked="checked" >
+                        <label for="male" style="font-size: 15px; padding-right: 10px;" >student</label>
+                        <input type="radio" ngModel name="role" value="teacher">
+                        <label for="female"  style="font-size: 15px; padding-right: 10px;">teacher</label>
+                        <input type="radio" ngModel name="role" value="company">
+                        <label for="other"  style="font-size: 15px; padding-right: 10px;">company</label>
+                    </div> <!-- form-group// -->                                      
+                    <!-- <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block" disabled style="background-color: #389c64;" > Create Account  </button>
+                    </div>  -->
+                    <div *ngIf="!(projectuser.valid) else showSubmitButton">
+                        <button class="btn btn-lg btn-block btn-block" type="submit" disabled>submit</button>
+            
+                      </div>
+                      <ng-template #showSubmitButton>
+                        <button class="btn btn-lg btn-primary btn-block" style="background-color: #389c64;" type="submit"> submit </button>
+             
+                      </ng-template>
+                    <!-- form-group// -->      
+                                                                                
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          
+      
+
 
 </div>
 
