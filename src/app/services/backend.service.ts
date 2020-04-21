@@ -43,5 +43,7 @@ export class BackendService {
     let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
     return this._http.get("http://localhost:5000/viewprofile", httpOptions);
   }
-
+  userproject(data){
+    return this._http.post("http://localhost:5000/userproject", data );
+  }
 }

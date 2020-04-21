@@ -66,10 +66,12 @@
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
+               
                 </div>
                 <div class="modal-body" >
+                  <p *ngIf="error" style="  font-size: 18px; color: red;text-align: center;">{{errorMessage}}</p>
                   <!-- form -->
-                  <form class="was-validated need-validation" #projectuser="ngForm"  (ngSubmit)="userproject(projectuser.value)" >
+                  <form class="was-validated need-validation" #projectuser="ngForm"  (ngSubmit)="userproject(projectuser.value)" *ngIf="formstatus">
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
@@ -127,7 +129,9 @@
                     <!-- form-group// -->      
                                                                                 
                   </form>
+                  <div *ngIf="!formstatus"><p class="content">thanks for joining us our technical team will be contact you shortly</p></div>
                 </div>
+                
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                  
