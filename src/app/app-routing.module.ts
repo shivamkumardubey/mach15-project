@@ -12,6 +12,8 @@ import{ChangepasswordComponent}from'./changepassword/changepassword.component'
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { from } from 'rxjs';
 import { ProjectComponent } from './project/project.component';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { PostideaComponent } from './postidea/postidea.component';
 
 const routes: Routes = [ 
   {path:"",component:MainComponent},
@@ -23,7 +25,8 @@ const routes: Routes = [
   {path:"changepassword",component:ChangepasswordComponent,canActivate:[AuthGaurdService]},
   {path:"dashboard",component:DashboardComponent,canActivate:[AuthGaurdService]},
   {path:"project",component:ProjectComponent},
-
+  {path:"forgetpassword",component:ForgetpasswordComponent,canActivate:[AuthGaurdService]},
+  {path:"postidea",component:PostideaComponent}
 ];
 
 @NgModule({
@@ -31,4 +34,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingComponent=[SignupComponent,MainComponent,LoginComponent,ComputerscienceComponent,ElectronicsComponent,ProjectlistComponent,ChangepasswordComponent,DashboardComponent,ProjectComponent]
+export const RoutingComponent=[SignupComponent,MainComponent,LoginComponent,ComputerscienceComponent,ElectronicsComponent,ProjectlistComponent,ChangepasswordComponent,DashboardComponent,ProjectComponent,ForgetpasswordComponent,PostideaComponent]

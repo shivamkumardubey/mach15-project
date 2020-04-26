@@ -1,0 +1,126 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main{
+    width: 100%;
+    background-color:#ffe6e6 ;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.25);
+}
+.svg{
+    margin-top: 30px;
+    font-size: 15px;
+}
+.svg1{
+    margin-right: 30px;
+   
+}
+
+    
+
+form {
+    
+  text-align: center;
+  margin: 20px auto;
+}
+form input, form textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  font-family: 'Merriweather', sans-serif;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  resize: none;
+}
+form input:focus, form textarea:focus {
+  -moz-box-shadow: 0 0px 2px #e74c3c !important;
+  -webkit-box-shadow: 0 0px 2px #e74c3c !important;
+  box-shadow: 0 0px 2px #e74c3c !important;
+}
+form #input-submit {
+  color: white;
+  background: #e74c3c;
+  cursor: pointer;
+}
+form #input-submit:hover {
+  -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+.add1 {
+  height: 126px;
+}
+.add{
+    height: 226px;
+}
+
+.half {
+  float: left;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+
+.left {
+  margin-right: 2%;
+}
+
+@media (max-width: 480px) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+}
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+
+.btn {
+    padding: .5rem 2rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #e74c3c;
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 3px solid #e74c3c;
+  }
+  
+  .btn::before {
+    font-family: 'Material Icons';
+    content: '\e037';
+    vertical-align: middle;
+    font-size: 1.5em;
+    padding-right: .5em;
+  }
+  
+  .btn-outline:hover {
+    border-color: #2a9fff;
+    color: #2a9fff;
+    box-shadow: 0px 1px 8px 0px rgba(245, 199, 0, 0.2);
+  }
+  

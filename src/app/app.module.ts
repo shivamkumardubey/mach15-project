@@ -10,18 +10,23 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ComputerscienceComponent } from './computerscience/computerscience.component';
 import { ElectronicsComponent } from './electronics/electronics.component';
-import{FormsModule} from "@angular/forms"
+import{FormsModule,ReactiveFormsModule} from "@angular/forms"
 import { HttpClientModule } from '@angular/common/http';
 import{ AuthGaurdService} from './services/auth-gaurd.service'
 import{ BackendService} from './services/backend.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 import { from } from 'rxjs';
 import { ViewprofileComponent } from './viewprofile/viewprofile.component';
 import { ProjectlistComponent } from './projectlist/projectlist.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProjectComponent } from './project/project.component';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { PostideaComponent } from './postidea/postidea.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,11 +42,13 @@ import { ProjectComponent } from './project/project.component';
     ProjectlistComponent,
     ChangepasswordComponent,
     DashboardComponent,
-    ProjectComponent
+    ProjectComponent,
+    ForgetpasswordComponent,
+    PostideaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,HttpClientModule,MatTabsModule, BrowserAnimationsModule
+    AppRoutingModule,FormsModule,HttpClientModule,MatTabsModule, BrowserAnimationsModule,MatStepperModule, ReactiveFormsModule,MatInputModule,MatButtonModule
   ],
   providers: [AuthGaurdService,BackendService],
   bootstrap: [AppComponent]
